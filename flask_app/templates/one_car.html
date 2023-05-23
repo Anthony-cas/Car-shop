@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <a href="/dashboard">dashboard</a>
+    <a href="/logout">Logout</a>
+    <h2>Price: {{one_car.price}}</h2>
+    <p>Model: {{one_car.model}}</p>
+    <p>Make: {{one_car.make}}</p>
+    <p>Year: {{one_car.year}}</p>
+    <p>Description: {{one_car.description}}</p>
+    {% if user_id == one_car.user_id %}
+    <a href="/cars/delete/{{one_car.id}}">Purchase</a>
+{% endif %}
+</body>
+</html>
+
+
